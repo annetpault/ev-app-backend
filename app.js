@@ -35,7 +35,7 @@ const Vehicle=mongoose.model("Vehicles",new mongoose.Schema(
     }
 ))
 
-app.get("/view-vehicle",async(req,res)=> {
+app.post("/view-vehicle",async(req,res)=> {
     const vehicles=await Vehicle.find()
     res.json(vehicles);
 });
